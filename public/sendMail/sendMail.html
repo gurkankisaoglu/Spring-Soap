@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SRDC User Management</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="sendMail.css">
+    </head>
+    <body>
+        <div class="jumbotron" >
+            <form class="form-horizontal" action="/action_page.php">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="toSend">Receiver Username:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="toSend" placeholder="Enter Receiver Username">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="message">Message:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="message" placeholder="Your Message">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-default" onclick="sendMessage()">Send Message</button>
+                        <button type="button" class="btn btn-default" onclick="goBack()">Go Home!</a> </button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <script src="sendMail.js"></script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SRDC User Management System</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    </head>
+    <body onload="loadMessages();">
+       <div class="container">
+        <table class="table" >
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col"><a href="#" onclick="sort(0)">From</a></th>
+                <th scope="col"><a href="#" onclick="sort(1)">To</a></th>
+                <th scope="col"><a href="#" onclick="sort(2)">Date</a></th>
+                <th scope="col"><a href="#" onclick="sort(3)">Message</a></th>
+            </tr>
+            </thead>
+            <tbody id="outboxTable">
+
+            </tbody>
+        </table>
+
+        <button type="button" onclick="goBack();">Go Home!</a> </button>
+       </div>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <script src="outbox.js"></script>
+    </body>
+</html>

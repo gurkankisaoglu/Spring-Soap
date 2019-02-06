@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SRDC User Management System</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    </head>
+    <body onload="loadUsers();">
+    <div class="jumbotron">
+
+        <table class="table" >
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col"><a href="#" onclick="sort(0)">username</a></th>
+                <th scope="col"><a href="#" onclick="sort(1)">password</a></th>
+                <th scope="col"><a href="#" onclick="sort(3)">email</a></th>
+                <th scope="col"><a href="#" onclick="sort(4)">gender</a></th>
+                <th scope="col"><a href="#" onclick="sort(5)">address</a></th>
+                <th scope="col"><a href="#" onclick="sort(6)">authority</a></th>
+                <th scope="col"><a href="#" onclick="sort(7)">operation</a></th>
+            </tr>
+            </thead>
+            <tbody id="usersTable">
+
+            </tbody>
+        </table>
+
+        <button type="button" onclick="goBack();">Go Home!</a> </button>
+    </div>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="opPanel.js"></script>
+    </body>
+</html>

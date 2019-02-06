@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SRDC User Management System</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    </head>
+    <body onload="isAdmin();">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">SRDC User Management</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="localhost:8080/home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Options
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu"  id="options">
+                            <li><a href="#" onclick="loadInbox()" class="dropdown-item ">Inbox</a></li>
+                            <li><a href="#" onclick="loadOutbox()" class="dropdown-item ">Outbox</a></li>
+                            <li><a href="#" onclick="loadSendMail()" class="dropdown-item ">Send Mail</a></li>
+                            <li id="disable1" class="hidden"><a href="#" onclick="loadOpPanel()" class="dropdown-item">Operation Panel</a> </li>
+                            <li><a href="#" onclick="loadLoginScreen()" class="dropdown-item ">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Welcome to SRDC User Management Application</h1>
+                <p>SRDC Corp. is founded by a professional team of engineers directed by Prof. Dr. Asuman Dogac in Technopolis, located at the Middle East Technical University. SRDC Corp. is a spin-off of METU-SRDC.</p>
+            </div>
+        </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="home.js"></script>
+    </body>
+</html>

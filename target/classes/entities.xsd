@@ -1,0 +1,216 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+
+
+    <xs:element name="getDeleteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="currentUser" type="xs:string"/>
+                <xs:element name="token" type="xs:string"/>
+                <xs:element name="username" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getDeleteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultInfo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="getCreateRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="currentUser" type="xs:string"/>
+                <xs:element name="token" type="xs:string"/>
+                <xs:element name="username" type="xs:string"/>
+                <xs:element name="password" type="xs:string"/>
+                <xs:element name="email" type="xs:string"/>
+                <xs:element name="gender" type="xs:string"/>
+                <xs:element name="address" type="xs:string"/>
+                <xs:element name="authority" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getCreateResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultInfo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+    <xs:element name="getUpdateRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="currentUser" type="xs:string"/>
+                <xs:element name="token" type="xs:string"/>
+                <xs:element name="username" type="xs:string"/>
+                <xs:element name="identity" type="xs:string"/>
+                <xs:element name="newIdentity" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getUpdateResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultInfo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+    <xs:element name="sendAdminRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="username" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="sendAdminResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultInfo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="sendLoginRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="loginInfo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="sendLoginResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="token" type="xs:string"/>
+                <xs:element name="resultInfo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="sendLogoutRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="logoutInfo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="sendLogoutResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultInfo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="sendMailRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="currentUser" type="xs:string"/>
+                <xs:element name="token" type="xs:string"/>
+                <xs:element name="messageInfo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="sendMailResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultInfo" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getOutboxRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="currentUser" type="xs:string"/>
+                <xs:element name="token" type="xs:string"/>
+                <xs:element name="from" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getOutboxResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="tns:message" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="getInboxRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="currentUser" type="xs:string"/>
+                <xs:element name="token" type="xs:string"/>
+                <xs:element name="to" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getInboxResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="tns:message" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="getUserRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="username" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getUserResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="message">
+        <xs:sequence>
+            <xs:element name="from" type="xs:string"/>
+            <xs:element name="to" type="xs:string"/>
+            <xs:element name="date" type="xs:date"/>
+            <xs:element name="text" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="user">
+        <xs:sequence>
+            <xs:element name="username" type="xs:string"/>
+            <xs:element name="password" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="gender" type="xs:string"/>
+            <xs:element name="address" type="xs:string"/>
+            <xs:element name="authority" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
